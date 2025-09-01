@@ -1,0 +1,256 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+        --color-clifford: #da373d;
+      }
+    </style>
+    <link rel="shortcut icon" href="assets/icon/icon.png " type="image/x-icon" class="w-full">
+    <title>Coffee Shop With APi</title>
+</head>
+
+<body class="scroll-smooth">
+        
+
+    <nav class="flex items-center justify-between w-full p-4 bg-white shadow-md relative mb-20">
+        <div class="flex items-center">
+            <img src="assets/icon/icon.png" alt="Logo" class="w-full" />
+        </div>
+
+        <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
+            &#9776;
+        </button>
+
+        <ul id="menu"
+            class="flex-col absolute top-full left-0 w-full bg-white shadow-md md:static md:flex md:flex-row md:gap-8 md:w-auto md:bg-transparent md:shadow-none gap-4 text-lg font-semibold text-gray-700 hidden md:flex">
+            <li class="hover:text-[#da373d] cursor-pointer transition px-4 py-2">Home</li>
+            <a href="#about">
+                <li class="hover:text-[#da373d] cursor-pointer transition px-4 py-2">About Us</li>
+            </a>
+            <a href="page/gallery.html" class="transition-all">
+                <li class="hover:text-[#da373d] cursor-pointer transition px-4 py-2">Gallery</li>
+            </a>
+            <li class="md:hidden px-4 py-2">
+                <a href="#contact"
+                    class="block w-full px-5 py-2 bg-[#da373d] text-white rounded-lg font-semibold hover:bg-red-600 transition">
+                    Contact
+                </a>
+            </li>
+        </ul>
+
+        <a href="#contact"
+            class="px-5 py-2 bg-[#da373d] text-white rounded-lg font-semibold hover:bg-red-600 transition hidden md:block">
+            Contact
+        </a>
+    </nav>
+    <!-- TODO section pertama -->
+    <section class="w-full flex flex-col md:flex-row items-center md:items-start px-10 py-10 gap-10 mb-5" data-aos="fade-up>
+
+        <div class=" md:w-1/2 w-full flex justify-center">
+        <img src="assets/image/product.png" alt="" class="w-80 object-cover" />
+        </div>
+
+        <div class="md:w-1/2 w-full flex flex-col gap-4 mt-10 md:mt-0">
+            <h6 class="text-[#0039DD] text-[12px]">What’s new?</h6>
+            <h3 class="text-[#282828] text-[40px]">Meet our new coffee!</h3>
+            <p>Try one of our signature selections and see what everyone’s talking about or select ‘Catalogue’ at the
+                top of the page to view all the possibilities.</p>
+        </div>
+    </section>
+    <!-- TODO DUA -->
+    <section id="about" class="w-full flex flex-col md:flex-row items-center md:items-start px-10 py-10 gap-10 mb-14"
+        data-aos="fade-up">
+
+        <div class="md:w-1/2 w-full flex flex-col mt-10 md:mt-0">
+            <h6 class="text-[#282828] text-[36px]"> What’s interesting about
+                this coffee?</h6>
+            <h3 class="text-[#282828] text-[16px]">Every morning begins with the perfect cup of coffee. The rich aroma
+                fills the air, promising a moment of peace before the day begins. With each warm sip, you taste the
+                careful balance of a well-roasted bean. It’s more than a drink; it’s a small ritual that prepares you
+                for whatever comes next.</h3>
+            <div class=" flex flex-row gap-2 mt-5">
+                <p class=" flex md:start text-[19px] text-blue-500">Read more </p>
+                <h6 class="text-[20px] animate-pulse">>>></h6>
+            </div>
+        </div>
+        <div class="md:w-1/2 w-full flex justify-center gap-5">
+            <img src="assets/image/product2.png" alt="" class="w-80 object-cover" />
+        </div>
+    </section>
+    <!-- TODO TIGA -->
+    <section class="w-full mb-8 ">
+
+        <!-- TODO tampilan untuk produk ya -->
+        <div class=" flex flex-row gap-2 mt-5 justify-between  mb-10">
+            <p class=" ml-4 flex md:start text-[25px] text-bold ">Check our sales for popular products </p>
+
+            <a href="#" class="flex flex-row gap-2 mt-5">
+                <h6 class="text-[25px] text-[#FF3939] ">show more</h6>
+                <h6 class="text-[25px] text-[#FF3939] animate-pulse"> >>></h6>
+            </a>
+
+
+        </div>
+        <div class="flex space-x-6 justify-center ">
+
+            <div
+                class="relative bg-white p-6 rounded-lg shadow-md max-w-sm text-center hover:scale-105 transform transition duration-300">
+                <div class="absolute top-0 right-0 m-4 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                    -30%
+                </div>
+
+                <div class="mb-4">
+                    <img src="assets/image/sale1.png" alt="Coffee Retail Packs" class="w-full h-auto">
+                </div>
+
+                <h3 class="text-lg font-semibold mb-2">Coffee Retail Packs</h3>
+
+                <p class="text-gray-500 mb-4">500 g</p>
+
+                <div class="mb-4">
+                    <span class="text-gray-400 line-through mr-2">$14.99</span>
+                    <span class="text-black font-bold text-lg">$10.49</span>
+                </div>
+
+                <div class="flex items-center justify-center space-x-2 mb-4">
+                    <button class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-lg">-</button>
+                    <span class="text-lg">1</span>
+                    <button class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-lg">+</button>
+                </div>
+
+                <button class="bg-orange-500 text-white py-2 px-8 rounded-full font-semibold w-full">
+                    Add to cart
+                </button>
+            </div>
+
+            <div
+                class="relative bg-white p-6 rounded-lg shadow-md max-w-sm text-center  hover:scale-105 transform transition duration-300">
+                <div class="absolute top-0 right-0 m-4 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                    -15%
+                </div>
+
+                <div class="mb-4">
+                    <img src="assets/image/sale2.png" alt="Brazil Blend Arabica" class="w-34 h-auto">
+                </div>
+
+                <h3 class="text-lg font-semibold mb-2">Brazil Blend Arabica</h3>
+
+                <p class="text-gray-500 mb-4">500 g</p>
+
+                <div class="mb-4">
+                    <span class="text-gray-400 line-through mr-2">$13.99</span>
+                    <span class="text-black font-bold text-lg">$11.89</span>
+                </div>
+
+                <div class="flex items-center justify-center space-x-2 mb-4">
+                    <button class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-lg">-</button>
+                    <span class="text-lg">1</span>
+                    <button class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-lg">+</button>
+                </div>
+
+                <button class="bg-orange-500 text-white py-2 px-8 rounded-full font-semibold w-full">
+                    Add to cart
+                </button>
+            </div>
+
+            <div
+                class="relative bg-white p-6 rounded-lg shadow-md max-w-sm text-center  hover:scale-105 transform transition duration-300">
+                <div class="absolute top-0 right-0 m-4 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                    -25%
+                </div>
+
+                <div class="mb-4">
+                    <img src="assets/image/sale3.png" alt="Unicorn Blood Dark" class="w-full h-auto">
+                </div>
+
+                <h3 class="text-lg font-semibold mb-2">Unicorn Blood Dark</h3>
+
+                <p class="text-gray-500 mb-4">500 g</p>
+
+                <div class="mb-4">
+                    <span class="text-gray-400 line-through mr-2">$16.50</span>
+                    <span class="text-black font-bold text-lg">$12.38</span>
+                </div>
+
+                <div class="flex items-center justify-center space-x-2 mb-4">
+                    <button class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-lg">-</button>
+                    <span class="text-lg">1</span>
+                    <button class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-lg">+</button>
+                </div>
+
+                <button class="bg-orange-500 text-white py-2 px-8 rounded-full font-semibold w-full">
+                    Add to cart
+                </button>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!-- TODO Empat ajakan -->
+    <section class="w-full flex flex-col md:flex-row items-center md:items-start px-10 py-10  mb-14">
+        <div class="gap-4 md:w-1/2 w-full flex flex-col  mt-10 md:mt-0">
+            <p class=" ml-9 mb-6">Subscribe to get emails about our new products and sales</p>
+            <div class="mb-10">
+
+                <input type="text" placeholder="   Enter your email"
+                    class=" ml-9 border-2 border-gray-300  rounded-[20px] focus:outline-none">
+                <label for="" class="p-1  bg-red-500 rounded-[20px] ">subcribe</label>
+            </div>
+
+        </div>
+        <div class="gap-4 md:w-1/2 w-full flex flex-col  mt-10 md:mt-0 items-center mb-5">
+            <p class=""> We have a passion for coffee and people. Make sure you always have your favorite cup of coffee
+                around to start your day off right.</p>
+            <img src="assets/icon/icon.png" alt="" class="mt-8">
+
+        </div>
+    </section>
+
+    <!--  TODO FOOTER -->
+
+    <footer class="w-full bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-6 md:mb-0">
+                    <h5 class="text-lg font-semibold mb-4">Coffee Shop</h5>
+                    <p class="text-sm">123 Coffee St.<br>City, State, 12345<br>(123) 456-7890</p>
+                </div>
+                <div class="mb-6 md:mb-0">
+                    <h5 class="text-lg font-semibold mb-4">Quick Links</h5>
+                    <ul>
+                        <li><a href="#" class="hover:underline">Home</a></li>
+                        <li><a href="#" class="hover:underline">About Us</a></li>
+                        <li><a href="#" class="hover:underline">Gallery</a></li>
+                        <li><a href="#" class="hover:underline">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold mb-4">Follow Us</h5>
+                    <ul class="">
+                        <li><a href="#" class="hover:underline">Facebook</a></li>
+                        <li><a href="#" class="hover:underline">Twitter</a></li>
+                        <li><a href="#" class="hover:underline">Instagram</a></li>
+                        <li><a href="#" class="hover:underline">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+    </footer>
+
+
+</body>
+
+</html>
+
+<script src="js/alat.js"></script>
+
+<script src="https://unpkg.com/@barba/core"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
